@@ -8,7 +8,7 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.release>20</maven.compiler.release>
-        <exec.mainClass>za.ac.cput.lostandfound.LostAndFound</exec.mainClass>
+        <exec.mainClass>za.ac.cput.lostandfound.Application.LostAndFound</exec.mainClass>
     </properties>
         <!-- Source: https://mvnrepository.com/artifact/org.apache.derby/derby -->
     <dependencies>

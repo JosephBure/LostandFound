@@ -4,13 +4,18 @@
 
 package za.ac.cput.lostandfound.Application;
 
+import javax.swing.SwingUtilities;
+import za.ac.cput.lostandfound.gui.AppEntryPage;
+
 /**
  *
  * @author rjbur
  */
 public class LostAndFound {
 
-    public static void main(String[] args) {
-        System.out.println("Hello World!");
+
+     public static void main(String[] args) {
+        
+        SwingUtilities.invokeLater(AppEntryPage::new);
     }
 }
