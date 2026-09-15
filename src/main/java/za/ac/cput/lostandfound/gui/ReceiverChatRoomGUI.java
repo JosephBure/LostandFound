@@ -1,13 +1,10 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package za.ac.cput.lostandfound.gui;
 
 import za.ac.cput.lostandfoundchatroom.components.ChatBubble;
 import za.ac.cput.lostandfoundchatroom.components.RoundedButton;
 import za.ac.cput.lostandfoundchatroom.components.RoundedTextField;
-
+import za.ac.cput.lostandfound.dao.MessageDAO;
+import za.ac.cput.lostandfoundchatroom.domain.Message;
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -27,29 +24,27 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
-import za.ac.cput.lostandfound.dao.MessageDAO;
-import za.ac.cput.lostandfoundchatroom.domain.Message;
 
 /**
  *
  * @author Khanya Bhixa
  */
-public class ChatroomPage extends JFrame {
+public class ReceiverChatRoomGUI extends JFrame {
 
-    private static final String CURRENT_USER =
-            "Khanya Bhixa";
+    private static final String CURRENT_USER
+            = "Lisa Booi";
 
-    private static final String OTHER_USER =
-            "Lisa Booi";
+    private static final String OTHER_USER
+            = "Khanya Bhixa";
 
-    private static final Color TEAL =
-            new Color(
+    private static final Color TEAL
+            = new Color(
                     22,
                     150,
                     150);
 
-    private static final Color DARK_BLUE =
-            new Color(
+    private static final Color DARK_BLUE
+            = new Color(
                     15,
                     34,
                     130);
@@ -60,10 +55,10 @@ public class ChatroomPage extends JFrame {
     private MessageDAO messageDAO;
     private int lastMessageCount = -1;
 
-    public ChatroomPage() {
+    public ReceiverChatRoomGUI() {
 
-        messageDAO =
-                new MessageDAO();
+        messageDAO
+                = new MessageDAO();
 
         setTitle(
                 "Lost & Found ChatRoom");
@@ -111,8 +106,8 @@ public class ChatroomPage extends JFrame {
 
     private JPanel createHeader() {
 
-        JPanel header =
-                new JPanel(
+        JPanel header
+                = new JPanel(
                         new BorderLayout());
 
         header.setBackground(
@@ -123,8 +118,8 @@ public class ChatroomPage extends JFrame {
                         900,
                         90));
 
-        JPanel left =
-                new JPanel(
+        JPanel left
+                = new JPanel(
                         new FlowLayout(
                                 FlowLayout.LEFT,
                                 0,
@@ -137,8 +132,8 @@ public class ChatroomPage extends JFrame {
                         450,
                         90));
 
-        JLabel back =
-                new JLabel("<");
+        JLabel back
+                = new JLabel("<");
 
         back.setForeground(
                 Color.WHITE);
@@ -159,8 +154,8 @@ public class ChatroomPage extends JFrame {
 
         left.add(back);
 
-        JPanel user =
-                new JPanel();
+        JPanel user
+                = new JPanel();
 
         user.setOpaque(false);
 
@@ -169,9 +164,9 @@ public class ChatroomPage extends JFrame {
                         user,
                         BoxLayout.Y_AXIS));
 
-        JLabel name =
-                new JLabel(
-                        "Lisa Booi");
+        JLabel name
+                = new JLabel(
+                        "Khanya Bhixa");
 
         name.setForeground(
                 Color.WHITE);
@@ -182,8 +177,8 @@ public class ChatroomPage extends JFrame {
                         Font.PLAIN,
                         27));
 
-        JLabel online =
-                new JLabel(
+        JLabel online
+                = new JLabel(
                         "<html>"
                         + "<span style='color:#20C878;'>●</span>"
                         + "&nbsp;"
@@ -205,17 +200,17 @@ public class ChatroomPage extends JFrame {
                 left,
                 BorderLayout.WEST);
 
-        JLabel menu =
-        new JLabel("⋮");
+        JLabel menu
+                = new JLabel("⋮");
 
-menu.setForeground(
-        Color.WHITE);
+        menu.setForeground(
+                Color.WHITE);
 
-menu.setFont(
-        new Font(
-                "Segoe UI Symbol",
-                Font.PLAIN,
-                30));
+        menu.setFont(
+                new Font(
+                        "Segoe UI Symbol",
+                        Font.PLAIN,
+                        30));
 
         menu.setHorizontalAlignment(
                 SwingConstants.CENTER);
@@ -234,15 +229,15 @@ menu.setFont(
 
     private JPanel createChatArea() {
 
-        JPanel main =
-                new JPanel(
+        JPanel main
+                = new JPanel(
                         new BorderLayout());
 
         main.setBackground(
                 Color.WHITE);
 
-        JPanel post =
-                new JPanel(
+        JPanel post
+                = new JPanel(
                         new BorderLayout());
 
         post.setBackground(
@@ -253,8 +248,8 @@ menu.setFont(
                         900,
                         85));
 
-        JLabel phone =
-                new JLabel("▯");
+        JLabel phone
+                = new JLabel("▯");
 
         phone.setForeground(
                 Color.WHITE);
@@ -276,8 +271,8 @@ menu.setFont(
                 phone,
                 BorderLayout.WEST);
 
-        JPanel details =
-                new JPanel();
+        JPanel details
+                = new JPanel();
 
         details.setOpaque(false);
 
@@ -286,8 +281,8 @@ menu.setFont(
                         details,
                         BoxLayout.Y_AXIS));
 
-        JLabel title =
-                new JLabel(
+        JLabel title
+                = new JLabel(
                         "Lost Phone");
 
         title.setForeground(
@@ -299,8 +294,8 @@ menu.setFont(
                         Font.PLAIN,
                         18));
 
-        JLabel item =
-                new JLabel(
+        JLabel item
+                = new JLabel(
                         "iPhone 12 Black");
 
         item.setForeground(
@@ -312,8 +307,8 @@ menu.setFont(
                         Font.PLAIN,
                         17));
 
-        JLabel location =
-                new JLabel(
+        JLabel location
+                = new JLabel(
                         "Posted near library");
 
         location.setForeground(
@@ -333,8 +328,8 @@ menu.setFont(
                 details,
                 BorderLayout.CENTER);
 
-        RoundedButton viewPost =
-                new RoundedButton(
+        RoundedButton viewPost
+                = new RoundedButton(
                         "(!)  View Post");
 
         viewPost.setPreferredSize(
@@ -342,8 +337,8 @@ menu.setFont(
                         175,
                         48));
 
-        JPanel viewPanel =
-                new JPanel(
+        JPanel viewPanel
+                = new JPanel(
                         new FlowLayout(
                                 FlowLayout.RIGHT,
                                 20,
@@ -361,8 +356,8 @@ menu.setFont(
                 post,
                 BorderLayout.NORTH);
 
-        messagePanel =
-                new JPanel();
+        messagePanel
+                = new JPanel();
 
         messagePanel.setBackground(
                 Color.WHITE);
@@ -379,19 +374,17 @@ menu.setFont(
                         10,
                         18));
 
-        scrollPane =
-                new JScrollPane(
+        scrollPane
+                = new JScrollPane(
                         messagePanel);
 
         scrollPane.setBorder(null);
 
         scrollPane.setHorizontalScrollBarPolicy(
-                ScrollPaneConstants
-                        .HORIZONTAL_SCROLLBAR_NEVER);
+                ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
 
         scrollPane.setVerticalScrollBarPolicy(
-                ScrollPaneConstants
-                        .VERTICAL_SCROLLBAR_AS_NEEDED);
+                ScrollPaneConstants.VERTICAL_SCROLLBAR_AS_NEEDED);
 
         scrollPane.getVerticalScrollBar()
                 .setUnitIncrement(16);
@@ -405,8 +398,8 @@ menu.setFont(
 
     private JPanel createMessageInput() {
 
-        JPanel input =
-                new JPanel(
+        JPanel input
+                = new JPanel(
                         new BorderLayout(
                                 10,
                                 10));
@@ -424,16 +417,16 @@ menu.setFont(
                         10,
                         15));
 
-        txtMessage =
-                new RoundedTextField();
+        txtMessage
+                = new RoundedTextField();
 
         txtMessage.setPreferredSize(
                 new Dimension(
                         0,
                         48));
 
-        RoundedButton send =
-                new RoundedButton(
+        RoundedButton send
+                = new RoundedButton(
                         "Send");
 
         send.setPreferredSize(
@@ -460,16 +453,16 @@ menu.setFont(
 
     private void sendMessage() {
 
-        String text =
-                txtMessage.getText()
+        String text
+                = txtMessage.getText()
                         .trim();
 
         if (text.isEmpty()) {
             return;
         }
 
-        Message message =
-                new Message(
+        Message message
+                = new Message(
                         CURRENT_USER,
                         OTHER_USER,
                         text);
@@ -488,8 +481,8 @@ menu.setFont(
     private void loadMessages(
             boolean scrollToBottom) {
 
-        List<Message> messages =
-                messageDAO.getConversation(
+        List<Message> messages
+                = messageDAO.getConversation(
                         CURRENT_USER,
                         OTHER_USER);
 
@@ -502,8 +495,8 @@ menu.setFont(
 
         messagePanel.removeAll();
 
-        JLabel today =
-                new JLabel(
+        JLabel today
+                = new JLabel(
                         "Today");
 
         today.setForeground(
@@ -518,8 +511,8 @@ menu.setFont(
                         Font.PLAIN,
                         14));
 
-        JPanel todayPanel =
-                new JPanel(
+        JPanel todayPanel
+                = new JPanel(
                         new FlowLayout(
                                 FlowLayout.CENTER,
                                 0,
@@ -537,18 +530,18 @@ menu.setFont(
 
         for (Message message : messages) {
 
-            boolean mine =
-                    CURRENT_USER.equals(
+            boolean mine
+                    = CURRENT_USER.equals(
                             message.getSender());
 
-            JPanel row =
-                    new JPanel(
+            JPanel row
+                    = new JPanel(
                             new BorderLayout());
 
             row.setOpaque(false);
 
-            ChatBubble bubble =
-                    new ChatBubble(
+            ChatBubble bubble
+                    = new ChatBubble(
                             message.getMessage(),
                             mine);
 
@@ -571,8 +564,8 @@ menu.setFont(
                     Box.createVerticalStrut(0));
         }
 
-        lastMessageCount =
-                messages.size();
+        lastMessageCount
+                = messages.size();
 
         messagePanel.revalidate();
         messagePanel.repaint();
@@ -596,8 +589,8 @@ menu.setFont(
 
     private void startRefresh() {
 
-        Timer timer =
-                new Timer(
+        Timer timer
+                = new Timer(
                         1000,
                         e -> loadMessages(false));
 
@@ -608,6 +601,6 @@ menu.setFont(
             String[] args) {
 
         SwingUtilities.invokeLater(
-                ChatroomPage::new);
+                ReceiverChatRoomGUI::new);
     }
 }
