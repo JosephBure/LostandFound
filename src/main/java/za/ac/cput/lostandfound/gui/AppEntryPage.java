@@ -29,7 +29,7 @@ public class AppEntryPage extends JFrame {
     }
     
  
-    private JPanel buildCenterPanel() {
+    private JPanel buildCenterPanel() { 
         JPanel panel = new JPanel();
         panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
         panel.setBorder(BorderFactory.createEmptyBorder(40, 30, 30, 30));
