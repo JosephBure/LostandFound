@@ -1,4 +1,4 @@
-package za.ac.cput.lostandfoundchatroom.domain;
+package za.ac.cput.lostandfound.domain;
 
 import java.sql.Timestamp;
 

@@ -1,7 +1,8 @@
 package za.ac.cput.lostandfound.dao;
 
+
 import za.ac.cput.lostandfound.connection.DBConnection;
-import za.ac.cput.lostandfoundchatroom.domain.Message;
+import za.ac.cput.lostandfound.domain.Message;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -10,7 +11,8 @@ import java.sql.SQLException;
 import java.sql.Timestamp;
 import java.util.ArrayList;
 import java.util.List;
-import za.ac.cput.lostandfound.connection.DBConnection;
+
+import java.sql.SQLException;
 
 /**
  *

@@ -4,7 +4,7 @@ import za.ac.cput.lostandfoundchatroom.components.ChatBubble;
 import za.ac.cput.lostandfoundchatroom.components.RoundedButton;
 import za.ac.cput.lostandfoundchatroom.components.RoundedTextField;
 import za.ac.cput.lostandfound.dao.MessageDAO;
-import za.ac.cput.lostandfoundchatroom.domain.Message;
+
 
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -24,6 +24,7 @@ import javax.swing.ScrollPaneConstants;
 import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
+import za.ac.cput.lostandfound.domain.Message;
 
 /**
  *
@@ -597,10 +598,5 @@ public class ReceiverChatRoomGUI extends JFrame {
         timer.start();
     }
 
-    public static void main(
-            String[] args) {
-
-        SwingUtilities.invokeLater(
-                ReceiverChatRoomGUI::new);
-    }
 }
+

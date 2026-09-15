@@ -28,7 +28,9 @@ import javax.swing.SwingConstants;
 import javax.swing.SwingUtilities;
 import javax.swing.Timer;
 import za.ac.cput.lostandfound.dao.MessageDAO;
-import za.ac.cput.lostandfoundchatroom.domain.Message;
+import za.ac.cput.lostandfound.domain.Message;
+
+
 
 /**
  *
@@ -59,6 +61,7 @@ public class ChatroomPage extends JFrame {
     private RoundedTextField txtMessage;
     private MessageDAO messageDAO;
     private int lastMessageCount = -1;
+    private Timer refreshTimer;
 
     public ChatroomPage() {
 
@@ -596,18 +599,21 @@ menu.setFont(
 
     private void startRefresh() {
 
-        Timer timer =
+        refreshTimer =
                 new Timer(
                         1000,
                         e -> loadMessages(false));
 
-        timer.start();
+        refreshTimer.start();
+
+        addWindowListener(
+                new java.awt.event.WindowAdapter() {
+                    @Override
+                    public void windowClosing(
+                            java.awt.event.WindowEvent e) {
+                        refreshTimer.stop();
+                    }
+                });
     }
 
-    public static void main(
-            String[] args) {
-
-        SwingUtilities.invokeLater(
-                ChatroomPage::new);
-    }
 }
