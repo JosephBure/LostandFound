@@ -2,12 +2,12 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package za.ac.cput.lostandfound.domain;
+package za.ac.cput.lostandfound.DAO;
 
 /**
  *
  * @author rjbur
  */
-public class ChatMessage {
+public class CategoryDAO {
     
 }

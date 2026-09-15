@@ -10,13 +10,12 @@
         <maven.compiler.release>20</maven.compiler.release>
         <exec.mainClass>za.ac.cput.lostandfound.Application.LostAndFound</exec.mainClass>
     </properties>
-        <!-- Source: https://mvnrepository.com/artifact/org.apache.derby/derby -->
+    <!-- Source: https://mvnrepository.com/artifact/org.apache.derby/derbyclient -->
     <dependencies>
-<dependency>
-    <groupId>org.apache.derby</groupId>
-    <artifactId>derby</artifactId>
-    <version>10.14.2.0</version>
-    <scope>test</scope>
-</dependency>
+        <dependency>
+            <groupId>org.apache.derby</groupId>
+            <artifactId>derbyclient</artifactId>
+            <version>10.14.2.0</version>
+        </dependency>
     </dependencies>
 </project>
